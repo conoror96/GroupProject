@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Display Weather Report</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ Page to Display Weather Reports
+ <!-- <button [navPush]="AddWeatherReportPage">Click here to add a new weather report</button> -->
+
+<ion-list>
+		<ion-item>
+			<ion-label floating>Enter Report Number</ion-label>
+			<ion-input type="text" name="reportno" [(ngModel)]="data.reportno"></ion-input>
+		</ion-item>
+
+		<button ion-button block (click)="submit()">Search Database</button>
+	<!--	<button ion-button round outline block (click)="newReport()">Add New Report</button> -->
+  
+	</ion-list>
+
+	<ion-card>
+		<ion-card-header>
+			Weather in {{data.response}} <br /> on {{data.response1}}
+		</ion-card-header>
+
+		<ion-card-content>
+		<ion-item>
+    <ion-label>Location = {{data.response}}</ion-label>
+  	</ion-item>
+
+		<ion-item>
+    <ion-label>Date = {{data.response1}}</ion-label>
+  	</ion-item>
+
+		<ion-item>
+    <ion-label>Rainfall (mm) = {{data.response2}}</ion-label>
+  	</ion-item>
+
+		<ion-item>
+    <ion-label>Air Temperature = {{data.response3}}</ion-label>
+  	</ion-item>
+
+		<ion-item>
+    <ion-label>Soil Temperature = {{data.response4}}</ion-label>
+  	</ion-item>
+
+		<ion-item>
+    <ion-label>Wind Speed =	{{data.response5}}</ion-label>
+  	</ion-item>
+		</ion-card-content>
+	</ion-card>
+
+</ion-content>
